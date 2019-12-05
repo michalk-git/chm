@@ -1,0 +1,42 @@
+﻿  qstamp.cpp
+  bsp.cpp
+C:\qp\qpcpp\examples\workstation\chm6\bsp.cpp(131,13): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm6\bsp.cpp(190,19): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm6\bsp.cpp(191,20): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm6\bsp.cpp(106,12): warning C4189:  'wd': local variable is initialized but not referenced
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(707,1): warning C4530:  C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+  main.cpp
+  member.cpp
+C:\qp\qpcpp\examples\workstation\chm6\bsp.cpp(82): message :  see reference to function template instantiation 'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,const char *)' being compiled
+C:\qp\qpcpp\examples\workstation\chm6\member.cpp(89,21): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm6\member.cpp(109,20): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm6\member.cpp(119,21): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(257,1): warning C4530:  C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(248): message :  while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)'
+C:\qp\qpcpp\examples\workstation\chm6\member.cpp(91): message :  see reference to function template instantiation 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)' being compiled
+  chm.cpp
+C:\qp\qpcpp\examples\workstation\chm6\member.cpp(91): message :  see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+C:\qp\qpcpp\examples\workstation\chm6\chm.cpp(79,22): warning C4245:  '=': conversion from 'int' to 'uint16_t', signed/unsigned mismatch
+C:\qp\qpcpp\examples\workstation\chm6\chm.cpp(114,18): warning C4457:  declaration of 'e' hides function parameter
+C:\qp\qpcpp\examples\workstation\chm6\chm.cpp(104,2): message :  see declaration of 'e'
+C:\qp\qpcpp\examples\workstation\chm6\chm.cpp(125,20): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm6\chm.cpp(196,13): warning C4101:  'ev': unreferenced local variable
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(237,1): warning C4530:  C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(230): message :  while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned short)'
+C:\qp\qpcpp\examples\workstation\chm6\chm.cpp(207): message :  see reference to function template instantiation 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(unsigned short)' being compiled
+  system.cpp
+  watchdog.cpp
+C:\qp\qpcpp\examples\workstation\chm6\chm.cpp(111): message :  see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+C:\qp\qpcpp\examples\workstation\chm6\watchdog.cpp(10,6): warning C4189:  'secs_in_dur': local variable is initialized but not referenced
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(257,1): warning C4530:  C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(248): message :  while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)'
+C:\qp\qpcpp\examples\workstation\chm6\watchdog.cpp(34): message :  see reference to function template instantiation 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)' being compiled
+  Generating Code...
+C:\qp\qpcpp\examples\workstation\chm6\watchdog.cpp(34): message :  see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+  "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\bin\HostX86\x86\lib.exe" /out:"C:\qp\qpcpp\examples\workstation\chm6\QSpy\dpp.lib" "QSpy\*.obj"
+  Microsoft (R) Library Manager Version 14.22.27905.0
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+qp.lib(qs_port.obj) : error LNK2019: unresolved external symbol ___iob_func referenced in function "void __cdecl QP::QS_output(void)" (?QS_output@QP@@YAXXZ)
+C:\qp\qpcpp\examples\workstation\chm6\QSpy\dpp.exe : fatal error LNK1120: 1 unresolved externals

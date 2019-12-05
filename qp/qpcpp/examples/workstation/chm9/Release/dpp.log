@@ -1,0 +1,11 @@
+﻿  qstamp.cpp
+  "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\bin\HostX86\x86\lib.exe" /out:"C:\qp\qpcpp\examples\workstation\chm-trytomodify\Release\dpp.lib" "Release\*.obj"
+  Microsoft (R) Library Manager Version 14.22.27905.0
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  Generating code
+  0 of 552 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  dpp.vcxproj -> C:\qp\qpcpp\examples\workstation\chm-trytomodify\Release\dpp.exe

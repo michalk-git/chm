@@ -1,0 +1,17 @@
+﻿  qstamp.cpp
+  bsp.cpp
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(121,17): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(152,19): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(153,20): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(196,27): warning C4189:  'is_num': local variable is initialized but not referenced
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(195,27): warning C4101:  'ch': unreferenced local variable
+  "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\bin\HostX86\x86\lib.exe" /out:"C:\qp\qpcpp\examples\workstation\chm7\Release\dpp.lib" "Release\*.obj"
+  Microsoft (R) Library Manager Version 14.22.27905.0
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  Generating code
+  2 of 540 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  dpp.vcxproj -> C:\qp\qpcpp\examples\workstation\chm7\Release\dpp.exe

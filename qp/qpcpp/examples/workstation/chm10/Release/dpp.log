@@ -1,0 +1,47 @@
+﻿  qstamp.cpp
+  bsp.cpp
+C:\qp\qpcpp\examples\workstation\chm10\bsp.cpp(114,19): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm10\bsp.cpp(115,20): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm10\bsp.cpp(158,31): warning C4189:  'is_num': local variable is initialized but not referenced
+  main.cpp
+  member.cpp
+C:\qp\qpcpp\examples\workstation\chm10\bsp.cpp(157,31): warning C4101:  'ch': unreferenced local variable
+C:\qp\qpcpp\examples\workstation\chm10\member.cpp(92,28): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm10\member.cpp(93,23): warning C4002:  too many arguments for function-like macro invocation 'postFIFO'
+C:\qp\qpcpp\examples\workstation\chm10\member.cpp(116,29): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm10\member.cpp(117,23): warning C4002:  too many arguments for function-like macro invocation 'postFIFO'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(257,1): warning C4530:  C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(248): message :  while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)'
+C:\qp\qpcpp\examples\workstation\chm10\member.cpp(94): message :  see reference to function template instantiation 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)' being compiled
+  chm.cpp
+C:\qp\qpcpp\examples\workstation\chm10\member.cpp(94): message :  see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+C:\qp\qpcpp\examples\workstation\chm10\chm.cpp(82,80): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm10\chm.cpp(82,161): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm10\chm.cpp(82,123): warning C4244:  'argument': conversion from 'float' to 'const QP::QTimeEvtCtr', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm10\chm.cpp(82,42): warning C4244:  'argument': conversion from 'float' to 'const QP::QTimeEvtCtr', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm10\chm.cpp(84,66): warning C4244:  'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm10\chm.cpp(84,118): warning C4244:  'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm10\chm.cpp(84,104): warning C4244:  'argument': conversion from 'float' to 'const QP::QTimeEvtCtr', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm10\chm.cpp(84,52): warning C4244:  'argument': conversion from 'float' to 'const QP::QTimeEvtCtr', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm10\chm.cpp(192,29): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(257,1): warning C4530:  C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(248): message :  while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)'
+C:\qp\qpcpp\examples\workstation\chm10\chm.cpp(229): message :  see reference to function template instantiation 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)' being compiled
+  RegistrationHandler.cpp
+  system.cpp
+  watchdog.cpp
+C:\qp\qpcpp\examples\workstation\chm10\chm.cpp(96): message :  see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(257,1): warning C4530:  C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(248): message :  while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)'
+C:\qp\qpcpp\examples\workstation\chm10\watchdog.cpp(50): message :  see reference to function template instantiation 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)' being compiled
+C:\qp\qpcpp\examples\workstation\chm10\watchdog.cpp(50): message :  see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+  "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\bin\HostX86\x86\lib.exe" /out:"C:\qp\qpcpp\examples\workstation\chm10\Release\dpp.lib" "Release\*.obj"
+  Microsoft (R) Library Manager Version 14.22.27905.0
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  Generating code
+  546 of 555 functions (98.4%) were compiled, the rest were copied from previous compilation.
+    10 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  dpp.vcxproj -> C:\qp\qpcpp\examples\workstation\chm10\Release\dpp.exe

@@ -1,0 +1,23 @@
+﻿  qstamp.cpp
+  chm.cpp
+C:\qp\qpcpp\examples\workstation\chm12\chm.cpp(67,80): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm12\chm.cpp(67,161): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm12\chm.cpp(67,123): warning C4244:  'argument': conversion from 'float' to 'const QP::QTimeEvtCtr', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm12\chm.cpp(67,42): warning C4244:  'argument': conversion from 'float' to 'const QP::QTimeEvtCtr', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm12\chm.cpp(69,66): warning C4244:  'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm12\chm.cpp(69,118): warning C4244:  'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm12\chm.cpp(69,104): warning C4244:  'argument': conversion from 'float' to 'const QP::QTimeEvtCtr', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm12\chm.cpp(69,52): warning C4244:  'argument': conversion from 'float' to 'const QP::QTimeEvtCtr', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm12\chm.cpp(113,29): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(707,1): warning C4530:  C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+C:\qp\qpcpp\examples\workstation\chm12\chm.cpp(82): message :  see reference to function template instantiation 'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,const char *)' being compiled
+  "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\bin\HostX86\x86\lib.exe" /out:"C:\qp\qpcpp\examples\workstation\chm12\Release\dpp.lib" "Release\*.obj"
+  Microsoft (R) Library Manager Version 14.22.27905.0
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  Generating code
+  26 of 490 functions ( 5.3%) were compiled, the rest were copied from previous compilation.
+    2 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  dpp.vcxproj -> C:\qp\qpcpp\examples\workstation\chm12\Release\dpp.exe

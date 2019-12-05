@@ -1,0 +1,3 @@
+﻿  watchdog.cpp
+C:\qp\qpcpp\examples\workstation\wd_unit_tests\watchdog.cpp(29,37): warning C4551:  function call missing argument list
+  wd_unit_tests.vcxproj -> C:\qp\qpcpp\examples\workstation\wd_unit_tests\Debug\wd_unit_tests.exe

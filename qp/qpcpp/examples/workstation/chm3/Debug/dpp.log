@@ -1,0 +1,59 @@
+﻿  Could Not Find C:\qp\qpcpp\examples\workstation\chm3\Debug\qstamp.obj
+  qstamp.cpp
+  bsp.cpp
+C:\qp\qpcpp\examples\workstation\chm3\bsp.cpp(61,16): warning C4474:  'printf' : too many arguments passed for format string
+C:\qp\qpcpp\examples\workstation\chm3\bsp.cpp(61,16): message :  placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+C:\qp\qpcpp\examples\workstation\chm3\bsp.cpp(137,45): warning C4002:  too many arguments for function-like macro invocation 'postFIFO'
+  main.cpp
+  member.cpp
+C:\qp\qpcpp\examples\workstation\chm3\bsp.cpp(149,35): warning C4002:  too many arguments for function-like macro invocation 'postFIFO'
+C:\qp\qpcpp\examples\workstation\chm3\member.cpp(95,12): warning C4002:  too many arguments for function-like macro invocation 'postFIFO'
+C:\qp\qpcpp\examples\workstation\chm3\member.cpp(104,12): warning C4002:  too many arguments for function-like macro invocation 'postFIFO'
+C:\qp\qpcpp\examples\workstation\chm3\member.cpp(113,13): warning C4002:  too many arguments for function-like macro invocation 'postFIFO'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(707,1): warning C4530:  C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+  system.cpp
+  chm.cpp
+C:\qp\qpcpp\examples\workstation\chm3\member.cpp(91): message :  see reference to function template instantiation 'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,const char *)' being compiled
+C:\qp\qpcpp\examples\workstation\chm3\chm.cpp(98,18): warning C4457:  declaration of 'e' hides function parameter
+C:\qp\qpcpp\examples\workstation\chm3\chm.cpp(91,2): message :  see declaration of 'e'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(707,1): warning C4530:  C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+  Generating Code...
+C:\qp\qpcpp\examples\workstation\chm3\chm.cpp(79): message :  see reference to function template instantiation 'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,const char *)' being compiled
+libcpmtd.lib(xwcsxfrm.obj) : error LNK2001: unresolved external symbol __free_dbg
+libcpmtd.lib(StlCompareStringA.obj) : error LNK2001: unresolved external symbol __free_dbg
+libcpmtd.lib(locale.obj) : error LNK2001: unresolved external symbol __free_dbg
+libcpmtd.lib(StlLCMapStringA.obj) : error LNK2001: unresolved external symbol __free_dbg
+libcpmtd.lib(wlocale.obj) : error LNK2001: unresolved external symbol __free_dbg
+libcpmtd.lib(xlocale.obj) : error LNK2001: unresolved external symbol __free_dbg
+member.obj : error LNK2001: unresolved external symbol __free_dbg
+chm.obj : error LNK2001: unresolved external symbol __free_dbg
+libcpmtd.lib(locale0.obj) : error LNK2001: unresolved external symbol __free_dbg
+libcpmtd.lib(cout.obj) : error LNK2001: unresolved external symbol __free_dbg
+libcpmtd.lib(xwcsxfrm.obj) : error LNK2001: unresolved external symbol __malloc_dbg
+libcpmtd.lib(StlCompareStringA.obj) : error LNK2001: unresolved external symbol __malloc_dbg
+libcpmtd.lib(locale.obj) : error LNK2001: unresolved external symbol __malloc_dbg
+libcpmtd.lib(StlLCMapStringA.obj) : error LNK2001: unresolved external symbol __malloc_dbg
+libcpmtd.lib(wlocale.obj) : error LNK2001: unresolved external symbol __malloc_dbg
+libcpmtd.lib(xlocale.obj) : error LNK2001: unresolved external symbol __malloc_dbg
+member.obj : error LNK2001: unresolved external symbol __malloc_dbg
+chm.obj : error LNK2001: unresolved external symbol __malloc_dbg
+libcpmtd.lib(locale0.obj) : error LNK2001: unresolved external symbol __malloc_dbg
+libcpmtd.lib(cout.obj) : error LNK2001: unresolved external symbol __malloc_dbg
+libcpmtd.lib(locale.obj) : error LNK2001: unresolved external symbol __CrtDbgReport
+libcpmtd.lib(wlocale.obj) : error LNK2001: unresolved external symbol __CrtDbgReport
+libcpmtd.lib(xlocale.obj) : error LNK2001: unresolved external symbol __CrtDbgReport
+member.obj : error LNK2001: unresolved external symbol __CrtDbgReport
+chm.obj : error LNK2001: unresolved external symbol __CrtDbgReport
+libcpmtd.lib(xonce.obj) : error LNK2001: unresolved external symbol __CrtDbgReport
+libcpmtd.lib(cout.obj) : error LNK2001: unresolved external symbol __CrtDbgReport
+libcpmtd.lib(_tolower.obj) : error LNK2019: unresolved external symbol __calloc_dbg referenced in function __Getctype
+libcpmtd.lib(locale.obj) : error LNK2001: unresolved external symbol __calloc_dbg
+libcpmtd.lib(wlocale.obj) : error LNK2001: unresolved external symbol __calloc_dbg
+libcpmtd.lib(xlocale.obj) : error LNK2001: unresolved external symbol __calloc_dbg
+libcpmtd.lib(_tolower.obj) : error LNK2019: unresolved external symbol __wcsdup_dbg referenced in function __Getctype
+libcpmtd.lib(xstrcoll.obj) : error LNK2001: unresolved external symbol __wcsdup_dbg
+libcpmtd.lib(locale.obj) : error LNK2019: unresolved external symbol __realloc_dbg referenced in function "private: static void __cdecl std::locale::_Locimp::_Locimp_Addfac(class std::locale::_Locimp *,class std::locale::facet *,unsigned int)" (?_Locimp_Addfac@_Locimp@locale@std@@CAXPAV123@PAVfacet@23@I@Z)
+libcpmtd.lib(StlLCMapStringA.obj) : error LNK2019: unresolved external symbol __CrtDbgReportW referenced in function __freea_crt
+libcpmtd.lib(xmbtowc.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libcpmtd.lib(StlCompareStringA.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+C:\qp\qpcpp\examples\workstation\chm3\Debug\dpp.exe : fatal error LNK1120: 7 unresolved externals

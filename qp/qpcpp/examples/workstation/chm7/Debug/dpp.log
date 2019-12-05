@@ -1,0 +1,174 @@
+﻿  Could Not Find C:\qp\qpcpp\examples\workstation\chm7\Debug\qstamp.obj
+  qstamp.cpp
+  bsp.cpp
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(108,18): error C2065:  'N_MEMBER': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(120,15): error C2039:  'UserEvt': is not a member of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(15): message :  see declaration of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(120,22): error C2065:  'UserEvt': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(120,24): error C2065:  'user_evt': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(120,35): error C2039:  'UserEvt': is not a member of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(15): message :  see declaration of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(120,35): error C2061:  syntax error: identifier 'UserEvt'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(120,35): error C2039:  'NEW_USER_SIG': is not a member of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(15): message :  see declaration of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(121,2): error C2065:  'user_evt': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(122,15): error C2039:  'AO_CHM': is not a member of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(15): message :  see declaration of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(122,21): error C2065:  'AO_CHM': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(122,23): error C2065:  'user_evt': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(135,29): error C2039:  'AO_Member': is not a member of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(15): message :  see declaration of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(135,38): error C2065:  'AO_Member': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(135,47): error C2039:  'SUBSCRIBE_SIG': is not a member of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(15): message :  see declaration of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(135,47): error C2065:  'SUBSCRIBE_SIG': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(136,20): error C2039:  'AO_Member': is not a member of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(15): message :  see declaration of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(136,29): error C2065:  'AO_Member': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(136,38): error C2039:  'UNSUBSCRIBE_SIG': is not a member of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(15): message :  see declaration of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(136,38): error C2065:  'UNSUBSCRIBE_SIG': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(151,15): error C2039:  'MalfunctionEvt': is not a member of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(15): message :  see declaration of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(151,29): error C2065:  'MalfunctionEvt': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(151,31): error C2065:  'evt': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(151,37): error C2039:  'MalfunctionEvt': is not a member of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(15): message :  see declaration of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(151,37): error C2061:  syntax error: identifier 'MalfunctionEvt'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(151,37): error C2039:  'MALFUNCTION_SIG': is not a member of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(15): message :  see declaration of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(152,2): error C2065:  'evt': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(153,2): error C2065:  'evt': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(154,15): error C2039:  'AO_Member': is not a member of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(15): message :  see declaration of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(154,24): error C2065:  'AO_Member': undeclared identifier
+  main.cpp
+C:\qp\qpcpp\examples\workstation\chm7\bsp.cpp(154,33): error C2065:  'evt': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\main.cpp(11,40): error C2065:  'N_MEMBER': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\main.cpp(12,43): error C2065:  'N_MEMBER': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\main.cpp(12,53): error C2065:  'N_MEMBER': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\main.cpp(13,51): error C2039:  'MAX_PUB_SIG': is not a member of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.h(5): message :  see declaration of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\main.cpp(13,62): error C2065:  'MAX_PUB_SIG': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\main.cpp(14,12): error C2039:  'MemberEvt': is not a member of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\bsp.h(5): message :  see declaration of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\main.cpp(14,12): error C2065:  'MemberEvt': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\main.cpp(14,61): error C2065:  'N_MEMBER': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\main.cpp(14,70): error C2133:  'smlPoolSto': unknown size
+C:\qp\qpcpp\examples\workstation\chm7\main.cpp(24,40): error C2070:  'main::<unnamed-type-smlPoolSto> []': illegal sizeof operand
+C:\qp\qpcpp\examples\workstation\chm7\main.cpp(27,30): error C2065:  'N_MEMBER': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\main.cpp(28,9): error C2065:  'AO_Member': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\main.cpp(33,5): error C2065:  'AO_CHM': undeclared identifier
+  member.cpp
+C:\qp\qpcpp\examples\workstation\chm7\main.cpp(33,29): error C2065:  'N_MEMBER': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(16,24): error C2065:  'N_MEMBER': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(36,24): error C2065:  'N_MEMBER': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(51,31): error C2065:  'N_MEMBER': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(51,43): error C2078:  too many initializers
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(53,5): error C2078:  too many initializers
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(71,22): error C2065:  'N_MEMBER': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(89,8): error C2065:  'REQUEST_UPDATE_SIG': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(94,18): error C2039:  'MemberEvt': is not a member of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(68): message :  see declaration of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(94,27): error C2065:  'MemberEvt': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(94,29): error C2065:  'ae': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(94,34): error C2039:  'MemberEvt': is not a member of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(68): message :  see declaration of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(94,34): error C2061:  syntax error: identifier 'MemberEvt'
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(95,5): error C2065:  'ae': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(96,5): error C2065:  'AO_CHM': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(96,13): warning C4002:  too many arguments for function-like macro invocation 'postFIFO'
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(96,13): error C2065:  'ae': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(105,8): error C2065:  'SUBSCRIBE_SIG': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(107,14): error C2065:  'REQUEST_UPDATE_SIG': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(109,17): error C2039:  'MemberEvt': is not a member of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(68): message :  see declaration of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(109,26): error C2065:  'MemberEvt': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(109,28): error C2065:  'ae': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(109,33): error C2039:  'MemberEvt': is not a member of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(68): message :  see declaration of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(109,33): error C2061:  syntax error: identifier 'MemberEvt'
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(110,4): error C2065:  'ae': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(111,4): error C2065:  'AO_CHM': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(111,12): warning C4002:  too many arguments for function-like macro invocation 'postFIFO'
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(111,12): error C2065:  'ae': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(112,35): error C2065:  'ae': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(116,8): error C2065:  'UNSUBSCRIBE_SIG': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(118,17): error C2065:  'REQUEST_UPDATE_SIG': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(120,18): error C2039:  'MemberEvt': is not a member of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(68): message :  see declaration of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(120,27): error C2065:  'MemberEvt': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(120,29): error C2065:  'ae': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(120,34): error C2039:  'MemberEvt': is not a member of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(68): message :  see declaration of 'Core_Health'
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(120,34): error C2061:  syntax error: identifier 'MemberEvt'
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(121,5): error C2065:  'ae': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(122,5): error C2065:  'AO_CHM': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(122,13): warning C4002:  too many arguments for function-like macro invocation 'postFIFO'
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(122,13): error C2065:  'ae': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(123,36): error C2065:  'ae': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(128,8): error C2065:  'MALFUNCTION_SIG': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(129,25): error C2061:  syntax error: identifier 'MalfunctionEvt'
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(89,2): error C2051:  case expression not constant
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(105,2): error C2051:  case expression not constant
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(116,2): error C2051:  case expression not constant
+  chm.cpp
+C:\qp\qpcpp\examples\workstation\chm7\member.cpp(128,2): error C2051:  case expression not constant
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(27,15): error C3646:  'members': unknown override specifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(27,15): error C2143:  syntax error: missing ',' before '['
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(27,25): error C2143:  syntax error: missing ')' before ';'
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(27,25): error C2238:  unexpected token(s) preceding ';'
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(73,36): error C2039:  'getInstance': is not a member of 'WatchDog'
+C:\qp\qpcpp\examples\workstation\chm7\watchdog.h(15): message :  see declaration of 'WatchDog'
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(73,47): error C3861:  'getInstance': identifier not found
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(73,80): error C2065:  'UPDATE_SIG': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(74,24): error C2065:  'KICK_SIG': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(75,2): error C2439:  'Core_Health::CHM::wd': member could not be initialized
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(37): message :  see declaration of 'Core_Health::CHM::wd'
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(81,23): error C2065:  'N_MEMBER': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(82,4): error C2065:  'members': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(83,4): error C2065:  'members': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(84,4): error C2065:  'members': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(115,8): error C2065:  'UPDATE_SIG': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(119,18): warning C4457:  declaration of 'e' hides function parameter
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(109,2): message :  see declaration of 'e'
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(119,18): error C2065:  'REQUEST_UPDATE_SIG': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(131,8): error C2065:  'NEW_USER_SIG': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(134,4): error C2065:  'members': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(134,36): error C2061:  syntax error: identifier 'UserEvt'
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(135,4): error C2065:  'members': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(136,4): error C2065:  'members': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(140,8): error C2065:  'ALIVE_SIG': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(144,13): error C2061:  syntax error: identifier 'MemberEvt'
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(148,8): error C2065:  'members': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(149,5): error C2065:  'members': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(165,8): error C2065:  'UNSUBSCRIBE_SIG': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(169,13): error C2061:  syntax error: identifier 'MemberEvt'
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(170,8): error C2065:  'members': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(171,5): error C2065:  'members': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(175,9): error C2065:  'members': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(176,6): error C2065:  'members': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(184,8): error C2065:  'SUBSCRIBE_SIG': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(186,13): error C2061:  syntax error: identifier 'MemberEvt'
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(187,8): error C2065:  'members': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(188,5): error C2065:  'members': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(191,5): error C2065:  'members': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(200,8): error C2065:  'KICK_SIG': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(212,10): error C2065:  'members': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(212,55): error C2065:  'members': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(213,66): error C2065:  'members': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(215,5): error C2065:  'members': undeclared identifier
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(115,2): error C2051:  case expression not constant
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(131,2): error C2051:  case expression not constant
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(140,2): error C2051:  case expression not constant
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(165,2): error C2051:  case expression not constant
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(184,2): error C2051:  case expression not constant
+  system.cpp
+  watchdog.cpp
+C:\qp\qpcpp\examples\workstation\chm7\chm.cpp(200,2): error C2051:  case expression not constant
+C:\qp\qpcpp\examples\workstation\chm7\watchdog.cpp(11,6): warning C4189:  'secs_in_dur': local variable is initialized but not referenced
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(257,1): warning C4530:  C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(248): message :  while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)'
+C:\qp\qpcpp\examples\workstation\chm7\watchdog.cpp(35): message :  see reference to function template instantiation 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)' being compiled
+  Generating Code...
+C:\qp\qpcpp\examples\workstation\chm7\watchdog.cpp(35): message :  see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled

@@ -1,0 +1,20 @@
+﻿  qstamp.cpp
+  chm.cpp
+C:\qp\qpcpp\examples\workstation\chm3\chm.cpp(13,47): warning C4459:  declaration of 'msg_queue' hides global declaration
+C:\qp\qpcpp\examples\workstation\chm3\chm.cpp(11,14): message :  see declaration of 'msg_queue'
+C:\qp\qpcpp\examples\workstation\chm3\chm.cpp(21,19): warning C4244:  'initializing': conversion from '_Rep' to 'int', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm3\chm.cpp(21,19): warning C4244:         with
+C:\qp\qpcpp\examples\workstation\chm3\chm.cpp(21,19): warning C4244:         [
+C:\qp\qpcpp\examples\workstation\chm3\chm.cpp(21,19): warning C4244:             _Rep=float
+C:\qp\qpcpp\examples\workstation\chm3\chm.cpp(21,19): warning C4244:         ]
+C:\qp\qpcpp\examples\workstation\chm3\chm.cpp(23,16): warning C4244:  'argument': conversion from 'int' to 'uint8_t', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm3\chm.cpp(132,18): warning C4457:  declaration of 'e' hides function parameter
+C:\qp\qpcpp\examples\workstation\chm3\chm.cpp(122,2): message :  see declaration of 'e'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(707,1): warning C4530:  C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+C:\qp\qpcpp\examples\workstation\chm3\chm.cpp(108): message :  see reference to function template instantiation 'std::basic_ostream<char,std::char_traits<char>> &std::operator <<<std::char_traits<char>>(std::basic_ostream<char,std::char_traits<char>> &,const char *)' being compiled
+  Generating code
+  1 of 342 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  dpp.vcxproj -> C:\qp\qpcpp\examples\workstation\chm3\Release\dpp.exe

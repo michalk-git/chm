@@ -1,0 +1,141 @@
+﻿  Could Not Find C:\qp\qpcpp\examples\workstation\chm-trytomodify\Debug\qstamp.obj
+  qstamp.cpp
+  bsp.cpp
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\bsp.cpp(114,19): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\bsp.cpp(115,20): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\bsp.cpp(158,27): warning C4189:  'is_num': local variable is initialized but not referenced
+  main.cpp
+  member.cpp
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\bsp.cpp(157,27): warning C4101:  'ch': unreferenced local variable
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\member.cpp(93,21): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\member.cpp(94,13): warning C4002:  too many arguments for function-like macro invocation 'postFIFO'
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\member.cpp(117,21): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\member.cpp(118,13): warning C4002:  too many arguments for function-like macro invocation 'postFIFO'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(257,1): warning C4530:  C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(248): message :  while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)'
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\member.cpp(95): message :  see reference to function template instantiation 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)' being compiled
+  chm.cpp
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\member.cpp(95): message :  see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\chm.cpp(107,73): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\chm.cpp(107,148): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\chm.cpp(107,111): warning C4244:  'argument': conversion from 'float' to 'const QP::QTimeEvtCtr', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\chm.cpp(107,36): warning C4244:  'argument': conversion from 'float' to 'const QP::QTimeEvtCtr', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\chm.cpp(109,59): warning C4244:  'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\chm.cpp(109,105): warning C4244:  'argument': conversion from 'unsigned int' to 'float', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\chm.cpp(109,91): warning C4244:  'argument': conversion from 'float' to 'const QP::QTimeEvtCtr', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\chm.cpp(109,45): warning C4244:  'argument': conversion from 'float' to 'const QP::QTimeEvtCtr', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\chm.cpp(125,18): warning C4457:  declaration of 'e' hides function parameter
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\chm.cpp(115,2): message :  see declaration of 'e'
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\chm.cpp(180,16): warning C4456:  declaration of 'index' hides previous local declaration
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\chm.cpp(118,7): message :  see declaration of 'index'
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\chm.cpp(205,30): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\chm.cpp(219,13): warning C4101:  'ev': unreferenced local variable
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(257,1): warning C4530:  C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(248): message :  while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)'
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\chm.cpp(230): message :  see reference to function template instantiation 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)' being compiled
+  system.cpp
+  watchdog.cpp
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\chm.cpp(122): message :  see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(257,1): warning C4530:  C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(248): message :  while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)'
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\watchdog.cpp(52): message :  see reference to function template instantiation 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)' being compiled
+  Generating Code...
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\watchdog.cpp(52): message :  see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+  "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\bin\HostX86\x86\lib.exe" /out:"C:\qp\qpcpp\examples\workstation\chm-trytomodify\Debug\dpp.lib" "Debug\*.obj"
+  Microsoft (R) Library Manager Version 14.22.27905.0
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+libcpmtd.lib(wlocale.obj) : error LNK2001: unresolved external symbol __CrtDbgReport
+libcpmtd.lib(xlocale.obj) : error LNK2001: unresolved external symbol __CrtDbgReport
+libconcrtd.lib(TaskCollection.obj) : error LNK2001: unresolved external symbol __CrtDbgReport
+libconcrtd.lib(Chores.obj) : error LNK2001: unresolved external symbol __CrtDbgReport
+libcpmtd.lib(xonce.obj) : error LNK2001: unresolved external symbol __CrtDbgReport
+libcpmtd.lib(cout.obj) : error LNK2001: unresolved external symbol __CrtDbgReport
+libcpmtd.lib(thread0.obj) : error LNK2001: unresolved external symbol __CrtDbgReport
+libcpmtd.lib(locale.obj) : error LNK2001: unresolved external symbol __CrtDbgReport
+bsp.obj : error LNK2001: unresolved external symbol __CrtDbgReport
+member.obj : error LNK2001: unresolved external symbol __CrtDbgReport
+chm.obj : error LNK2001: unresolved external symbol __CrtDbgReport
+watchdog.obj : error LNK2001: unresolved external symbol __CrtDbgReport
+libcpmtd.lib(xlocale.obj) : error LNK2001: unresolved external symbol __calloc_dbg
+libcpmtd.lib(mutex.obj) : error LNK2001: unresolved external symbol __calloc_dbg
+libcpmtd.lib(locale.obj) : error LNK2001: unresolved external symbol __calloc_dbg
+libcpmtd.lib(cond.obj) : error LNK2001: unresolved external symbol __calloc_dbg
+libcpmtd.lib(wlocale.obj) : error LNK2001: unresolved external symbol __calloc_dbg
+member.obj : error LNK2001: unresolved external symbol __calloc_dbg
+chm.obj : error LNK2001: unresolved external symbol __calloc_dbg
+watchdog.obj : error LNK2001: unresolved external symbol __calloc_dbg
+libcpmtd.lib(_tolower.obj) : error LNK2001: unresolved external symbol __calloc_dbg
+libcpmtd.lib(StlCompareStringA.obj) : error LNK2001: unresolved external symbol __free_dbg
+libcpmtd.lib(cond.obj) : error LNK2001: unresolved external symbol __free_dbg
+libcpmtd.lib(wlocale.obj) : error LNK2001: unresolved external symbol __free_dbg
+libcpmtd.lib(xlocale.obj) : error LNK2001: unresolved external symbol __free_dbg
+libcpmtd.lib(xwcsxfrm.obj) : error LNK2001: unresolved external symbol __free_dbg
+libcpmtd.lib(cout.obj) : error LNK2001: unresolved external symbol __free_dbg
+libcpmtd.lib(mutex.obj) : error LNK2001: unresolved external symbol __free_dbg
+libcpmtd.lib(locale.obj) : error LNK2001: unresolved external symbol __free_dbg
+libcpmtd.lib(StlLCMapStringA.obj) : error LNK2001: unresolved external symbol __free_dbg
+member.obj : error LNK2001: unresolved external symbol __free_dbg
+chm.obj : error LNK2001: unresolved external symbol __free_dbg
+watchdog.obj : error LNK2001: unresolved external symbol __free_dbg
+libcpmtd.lib(locale0.obj) : error LNK2001: unresolved external symbol __free_dbg
+libcpmtd.lib(xlocale.obj) : error LNK2001: unresolved external symbol __malloc_dbg
+libcpmtd.lib(xwcsxfrm.obj) : error LNK2001: unresolved external symbol __malloc_dbg
+libcpmtd.lib(StlCompareStringA.obj) : error LNK2001: unresolved external symbol __malloc_dbg
+libcpmtd.lib(cout.obj) : error LNK2001: unresolved external symbol __malloc_dbg
+libcpmtd.lib(locale.obj) : error LNK2001: unresolved external symbol __malloc_dbg
+libcpmtd.lib(StlLCMapStringA.obj) : error LNK2001: unresolved external symbol __malloc_dbg
+libcpmtd.lib(wlocale.obj) : error LNK2001: unresolved external symbol __malloc_dbg
+member.obj : error LNK2001: unresolved external symbol __malloc_dbg
+chm.obj : error LNK2001: unresolved external symbol __malloc_dbg
+watchdog.obj : error LNK2001: unresolved external symbol __malloc_dbg
+libcpmtd.lib(locale0.obj) : error LNK2001: unresolved external symbol __malloc_dbg
+libcpmtd.lib(_tolower.obj) : error LNK2019: unresolved external symbol __wcsdup_dbg referenced in function __Getctype
+libcpmtd.lib(xstrcoll.obj) : error LNK2001: unresolved external symbol __wcsdup_dbg
+libcpmtd.lib(locale.obj) : error LNK2019: unresolved external symbol __realloc_dbg referenced in function "private: static void __cdecl std::locale::_Locimp::_Locimp_Addfac(class std::locale::_Locimp *,class std::locale::facet *,unsigned int)" (?_Locimp_Addfac@_Locimp@locale@std@@CAXPAV123@PAVfacet@23@I@Z)
+libconcrtd.lib(SearchAlgorithms.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(location.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(UMSBackgroundPoller.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(UMSFreeVirtualProcessorRoot.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(FreeVirtualProcessorRoot.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(FreeThreadProxy.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(ThreadProxy.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(UMSFreeThreadProxy.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(TaskCollectionBase.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(WorkQueue.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(Chores.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(VirtualProcessorRoot.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(UMSThreadVirtualProcessor.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(UMSThreadInternalContext.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(TransmogrifiedPrimary.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(Transmogrificator.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(ScheduleGroupBase.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(CacheLocalScheduleGroup.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(FairScheduleGroup.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(ExternalContextBase.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(VirtualProcessor.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(SchedulingNode.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(SubAllocator.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(SchedulingRing.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(SchedulerProxy.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(WinRTWrapper.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(ThreadProxyFactoryManager.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(InternalContextBase.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(TaskCollection.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(SchedulerPolicyBase.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(ExecutionResource.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(HillClimbing.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(SchedulerBase.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(UMSWrapper.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(UMSThreadProxy.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(ContextBase.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(event.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(Platform.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(utils.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(ResourceManager.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libcpmtd.lib(StlLCMapStringA.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libcpmtd.lib(xmbtowc.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libcpmtd.lib(StlCompareStringA.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(rtlocks.obj) : error LNK2001: unresolved external symbol __CrtDbgReportW
+libconcrtd.lib(SubAllocator.obj) : error LNK2019: unresolved external symbol __CrtIsValidHeapPointer referenced in function "private: bool __thiscall Concurrency::details::SubAllocator::InitAndCheckBlockOnAlloc(union Concurrency::details::AllocationEntry *,unsigned int)" (?InitAndCheckBlockOnAlloc@SubAllocator@details@Concurrency@@AAE_NPATAllocationEntry@23@I@Z)
+C:\qp\qpcpp\examples\workstation\chm-trytomodify\Debug\dpp.exe : fatal error LNK1120: 8 unresolved externals
