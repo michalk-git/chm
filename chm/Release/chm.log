@@ -1,6 +1,32 @@
-﻿  system.cpp
+﻿  SubscriptionHandler.cpp
+  bsp.cpp
+C:\Projects\chm\bsp.cpp(159,29): warning C4189:  'is_num': local variable is initialized but not referenced
+C:\Projects\chm\bsp.cpp(163,29): warning C4189:  'entry_ready': local variable is initialized but not referenced
+  chm.cpp
+C:\Projects\chm\bsp.cpp(158,29): warning C4101:  'ch': unreferenced local variable
+  main.cpp
+C:\Projects\chm\chm.cpp(124,30): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\Projects\chm\test.h(57,3): warning C4002:  too many arguments for function-like macro invocation 'PRINT_LOG'
+  member.cpp
+C:\Projects\chm\test.h(55,21): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\Projects\chm\test.h(57,3): warning C4002:  too many arguments for function-like macro invocation 'PRINT_LOG'
+C:\Projects\chm\test.h(55,21): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\Projects\chm\member.cpp(111,22): warning C4002:  too many arguments for function-like macro invocation 'postFIFO'
+C:\Projects\chm\member.cpp(117,22): warning C4002:  too many arguments for function-like macro invocation 'postFIFO'
+C:\Projects\chm\member.cpp(126,29): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\Projects\chm\member.cpp(127,23): warning C4002:  too many arguments for function-like macro invocation 'postFIFO'
+C:\Projects\chm\member.cpp(128,5): warning C4002:  too many arguments for function-like macro invocation 'PRINT_LOG'
+C:\Projects\chm\member.cpp(140,4): warning C4002:  too many arguments for function-like macro invocation 'PRINT_LOG'
+  system.cpp
+  watchdog.cpp
+C:\Projects\chm\member.cpp(147,5): warning C4002:  too many arguments for function-like macro invocation 'PRINT_LOG'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(257,1): warning C4530:  C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(248): message :  while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)'
+C:\Projects\chm\watchdog.cpp(50): message :  see reference to function template instantiation 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)' being compiled
+C:\Projects\chm\watchdog.cpp(50): message :  see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
   Generating code
-  Previous IPDB not found, fall back to full compilation.
-  All 457 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  323 of 464 functions (69.6%) were compiled, the rest were copied from previous compilation.
+    4 functions were new in current compilation
+    12 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   chm.vcxproj -> C:\Projects\chm\Release\chm.exe

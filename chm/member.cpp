@@ -1,9 +1,10 @@
 
 #include "system.h"
-#include <iostream>
 #include "test.h"
 using namespace std;
 Q_DEFINE_THIS_FILE
+
+
 
 // Active object class -------------------------------------------------------
 //$declare${AOs::Member} vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
@@ -15,12 +16,13 @@ public:
     static Member inst[N_MEMBER];
 
 private:
-	int num_deactivated_cycles;
+
 	int system_id;
 
 	// used for testing 
 	SubscriptionCmdOrWait cmd_handler;
-
+	QP::QTimeEvt        timeEvt_tick;
+	int num_deactivated_cycles;
 public:
 	Member();
 
@@ -71,16 +73,20 @@ namespace Core_Health {
 	Member Member::inst[N_MEMBER];
 	//${AOs::Member::Member} .......................................................
 	Member::Member()
-		: QActive(&initial), num_deactivated_cycles(0){};
+		: QActive(&initial), num_deactivated_cycles(0), timeEvt_tick(this, TICK_SIG, 0U) {};
 		
 	
 
 	//${AOs::Member::SM} ..........................................................
 	Q_STATE_DEF(Member, initial) {
 		//${AOs::Member::SM::initial}
-		if(e->sig == INIT_SIG) {
+
+		//arm time event that fires the signal TICK_SIG every second
+		timeEvt_tick.armX(Core_Health::BSP::TICKS_PER_SEC, Core_Health::BSP::TICKS_PER_SEC);
+
+		// handle initialization event 
+		if (e->sig == INIT_SIG) {
 			cmd_handler = (Q_EVT_CAST(InitializationEvt)->cmd_or_wait);
-			
 		}
 		return tran(&active);
 	}
@@ -88,15 +94,39 @@ namespace Core_Health {
 	//${AOs::Member::SM::active} ................................................
 	Q_STATE_DEF(Member, active) {
 
+
 		QP::QState status_;
 		switch (e->sig) {
+		case TICK_SIG: {
+			cmd_handler();
+			status_ = Q_RET_HANDLED;
+			break;
+		}
+
+		case MEMBER_SUBSCRIBE_SIG: {
+			//post event (coupled with signal 'SUBSCRIBE_SIG' ) to chm system
+			((QP::QEvt*)e)->sig = SUBSCRIBE_SIG;
+			AO_HealthMonitor->postFIFO((SubscribeUserEvt*)e, this);
+			status_ = Q_RET_HANDLED;
+			break;
+		}
+		case MEMBER_UNSUBSCRIBE_SIG: {
+			//post unsubscription event to chm system
+			UnSubscribeUserEvt* unsub = Q_NEW(UnSubscribeUserEvt, UNSUBSCRIBE_SIG);
+			unsub->member_num = system_id;
+			unsub->sender_id = (Q_EVT_CAST(UnSubscribeUserEvt)->sender_id);
+			AO_HealthMonitor->postFIFO(unsub, this);
+			status_ = Q_RET_HANDLED;
+			break;
+		}
+
 		case REQUEST_UPDATE_SIG: {
 			//if a member AO recevied a REQUEST_UPDATE_SIG it needs to post an ALIVE_SIG to the HealthMonitor active object unless it has been deactivated
 			if (num_deactivated_cycles == 0) {
 				MemberEvt* alive_evt = Q_NEW(MemberEvt, ALIVE_SIG);
-				alive_evt->memberNum = system_id;
+				alive_evt->member_num = system_id;
 				AO_HealthMonitor->postFIFO(alive_evt, this);
-				cout << "member " << system_id << " has sent ALIVE signal" <<endl;
+				PRINT_LOG("member %d has sent ALIVE signal\n",(int)system_id);
 			}
 			else --num_deactivated_cycles;
 			status_ = Q_RET_HANDLED;
@@ -104,31 +134,33 @@ namespace Core_Health {
 		}
 
         
-		case SUBSCRIBE_SIG: {
+		case SUBSCRIBE_ACKNOLEDGE_SIG: {
 			//all users who wish to subscribe to health monitor system will subscribe to the REQUEST_UPDATE_SIG signal
 			subscribe(REQUEST_UPDATE_SIG);
-			system_id = (Q_EVT_CAST(MemberEvt)->memberNum);
-			cout << "member " << system_id << " has subscribed" << endl;
+			system_id = (Q_EVT_CAST(MemberEvt)->member_num);
+			PRINT_LOG("member %d has subscribed\n", system_id);
 			status_ = Q_RET_HANDLED;
 			break;
 		}
-		case UNSUBSCRIBE_SIG: {
+		case UNSUBSCRIBE_ACKNOLEDGE_SIG: {
 			//users who wish to unsubscribe will stop receiving REQUEST_UPDATE_SIG signal
 			 unsubscribe(REQUEST_UPDATE_SIG);
-
-			 cout << "member " << system_id << " has unsubscribed" << endl;
+			 PRINT_LOG("member %d has has unsubscribed\n", system_id);
+			 system_id = -1;
+			 num_deactivated_cycles = 0;
 			 status_ = Q_RET_HANDLED;
 			 break;
 		}
 		//used for testing purposes
 		case DEACTIVATE_SIG: {
 			num_deactivated_cycles = (Q_EVT_CAST(DeactivationEvt)->period_num);
+			PRINT_LOG("in decativate of member %d", system_id);
 			status_ = Q_RET_HANDLED;
 			break;
 		}
 		//${AOs::Member::SM::active}
 		case Q_EXIT_SIG: {
-
+			timeEvt_tick.disarm();
 			status_ = Q_RET_HANDLED;
 			break;
 		}

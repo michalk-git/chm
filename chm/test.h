@@ -1,57 +1,57 @@
 #pragma once
-
+#include <chrono>
 #include "system.h"
+using namespace std::chrono;
 using namespace Core_Health;
 
-typedef enum CMD {
-	SUBSCRIBE,
-	UNSUBSCRIBE,
-	DEACTIVATE
-}Command_t;
 
 class Command {
 public:
 	int time;
-	Command_t cmd;
-	Command(Command_t subscription_cmd, int cmd_time) : cmd(subscription_cmd), time(cmd_time) {};
-	virtual void ExecuteCmd() = 0;
+	Command(int cmd_time) : time(cmd_time) {};
+	virtual ~Command() = default;
+	virtual void ExecuteCmd() {};
 };
 
-class UnSubscribeCommand : public Command {
+class UnSubscribe : public Command {
+	int sys_id;
 public:
-	UnSubscribeCommand(Command_t subscription_cmd, int cmd_time, int new_user_id) : Command(subscription_cmd, cmd_time) {};
-	virtual void ExecuteCmd() {
-		MemberEvt* user_evt = Q_NEW(MemberEvt, UNSUBSCRIBE_SIG);                                                                   //deleted index assignment without changing interfaces
-		AO_HealthMonitor->postFIFO(user_evt);
+	UnSubscribe(int cmd_time, int member_index) : Command(cmd_time),sys_id(member_index) {};
+	virtual void ExecuteCmd() override{
+		UnSubscribeUserEvt* user_evt = Q_NEW(UnSubscribeUserEvt, MEMBER_UNSUBSCRIBE_SIG);    //deleted index assignment without changing interfaces
+		user_evt->sender_id = sys_id;
+		AO_Member[sys_id]->postFIFO(user_evt);
 
 	}
 };
 
-class SubscribeCommand : public Command {
-public:
+class Subscribe : public Command {
+	int sys_id;
 	int user_id;
-	SubscribeCommand(Command_t subscription_cmd, int cmd_time, int new_user_id) : Command(subscription_cmd, cmd_time), user_id(new_user_id) {};
-	virtual void ExecuteCmd() {
-		//create an event with the new user's id and post it to the CHM system
-		RegisterNewUserEvt* user_evt = Q_NEW(RegisterNewUserEvt, SUBSCRIBE_SIG);
+public:
+	Subscribe(int cmd_time, int new_user_id, int member_index) : Command(cmd_time), user_id(new_user_id), sys_id(member_index) {};
+	virtual void ExecuteCmd() override {
+		//create an event with the new user's id and post it to the appropriate Member Ao
+		SubscribeUserEvt* user_evt = Q_NEW(SubscribeUserEvt, MEMBER_SUBSCRIBE_SIG);
 		user_evt->id = user_id;
-		AO_HealthMonitor->postFIFO(user_evt);
+		user_evt->sender_id = sys_id;
+		AO_Member[sys_id]->postFIFO(user_evt);
 	}
 };
 
-class DeactivateCommand : public Command {
+class Deactivate : public Command {
 public:
 	int cycle_num;
 	int index;
 
-	DeactivateCommand(Command_t subscription_cmd, int cmd_time, int deactivation_cycles, int member_index) : Command(subscription_cmd, cmd_time), cycle_num(deactivation_cycles), index(member_index) {};
-	virtual void ExecuteCmd() {
+	Deactivate( int cmd_time, int deactivation_cycles, int member_index) : Command(cmd_time), cycle_num(deactivation_cycles), index(member_index) {};
+	virtual void ExecuteCmd() override {
 		// create new event to notify the appropriate member and post it
 		DeactivationEvt* evt = Q_NEW(DeactivationEvt, DEACTIVATE_SIG);
 		evt->period_num = cycle_num;
 		AO_Member[index]->postFIFO(evt);
-
-		printf("Member %d is deactivated for %d cycles\n ", index, cycle_num);
+		PRINT_LOG("Member %d is deactivated for %d cycles\n ", index, cycle_num);
+		
 	}
 };
 
@@ -59,28 +59,39 @@ class SubscriptionCmdOrWait {
 	Command** subscribe_cmd_vec;
 	int subscribe_cmd_vec_len;
 	int curr_index;
-	int curr_time_in_ticks;
+	system_clock::time_point initial_time;
 
-	void CallNextCmd();
+	void CallNextCmd() {
+	//	printf("index = %d\n", curr_index);
+		subscribe_cmd_vec[curr_index++]->ExecuteCmd();
+		//printf("curr_index = %d\n", curr_index);
+	}
 
 public:
-	SubscriptionCmdOrWait() : subscribe_cmd_vec(NULL), subscribe_cmd_vec_len(0), curr_index(0), curr_time_in_ticks(0) {};
+	SubscriptionCmdOrWait() : subscribe_cmd_vec(NULL), subscribe_cmd_vec_len(0), curr_index(0), initial_time(system_clock::now()) {};
 	SubscriptionCmdOrWait(Command** command_vec, int length) {
 		subscribe_cmd_vec = command_vec;
 		curr_index = 0;
-		curr_time_in_ticks = 0;
+		initial_time = system_clock::now();
 		subscribe_cmd_vec_len = length;
 	}
 	void operator () () {
-		// Convert ticks to seconds
-		int seconds = (curr_time_in_ticks / (Core_Health::BSP::TICKS_PER_SEC));
+		
+		system_clock::time_point curr_time = system_clock::now();
+		
+		// find the duration of time since initialization of class in duration
+		duration<int> seconds = duration_cast<std::chrono::seconds>(curr_time - initial_time);
 		// check if we reached end of tests
-		if (curr_index == (subscribe_cmd_vec_len - 1)) return;
+		if (curr_index == (subscribe_cmd_vec_len )) {  return; }
 		// check if we need to run a new command yet
-		else if (seconds >= subscribe_cmd_vec[curr_index]->time) {
+		else if (seconds.count() >= (subscribe_cmd_vec[curr_index]->time)) {
 			CallNextCmd();
+			
+			
+			
 		}
-
+		
+		
 	}
 };
 

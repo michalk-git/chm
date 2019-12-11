@@ -6,13 +6,16 @@
 #include "chm.h"
 #include "SubscriptionHandler.h"
 
+
+
+
 Q_DEFINE_THIS_FILE
 using namespace std;
 using namespace Core_Health;
 #define KICK_SIGNAL_DELAY 1
 
 
-//ghghg
+
 namespace Core_Health {
 	class HealthMonitor : public QP::QActive {
 	public:
@@ -24,6 +27,7 @@ namespace Core_Health {
 		WatchDog&           watchdog_instance;
 		QP::QTimeEvt        timeEvt_request_update;
 		QP::QTimeEvt        timeEvt_kick;
+
 
 		
 	public:
@@ -71,25 +75,28 @@ namespace Core_Health {
 
 	//${AOs::HealthMonitor::SM::active} ..................................................
 	Q_STATE_DEF(HealthMonitor, active) {
+
 		QP::QState status_;
 
 		switch (e->sig) {
 		case UPDATE_SIG: {
-			bool no_users_in_sys = (0);                                                         //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-			cout << "update" << endl;
+			bool no_users_in_sys = (subscription_handler.GetMembersNum() == 0);                                                        
+			PRINT_LOG("update\n");
 			// if there are no subscribers, kick the watchdog
 			if (no_users_in_sys) watchdog_instance.Kick();
-			//publish signal REQUEST_UPDATE_SIG 
-			QP::QEvt* update_evt = Q_NEW(QP::QEvt, REQUEST_UPDATE_SIG);
-			QP::QF::PUBLISH(update_evt, this);
+			else {
+				//publish signal REQUEST_UPDATE_SIG 
+				QP::QEvt* update_evt = Q_NEW(QP::QEvt, REQUEST_UPDATE_SIG);
+				QP::QF::PUBLISH(update_evt, this);
+			}
 			status_ = Q_RET_HANDLED;
 			break;
 		}
 
 		case ALIVE_SIG: {
-			cout << "I'm alive" << endl;
+			PRINT_LOG("I'm alive\n");
 			//find which user has sent the ALIVE_SIG signal (ie the appropriate system id)
-			int index = (Q_EVT_CAST(MemberEvt)->memberNum);
+			int index = (Q_EVT_CAST(MemberEvt)->member_num);
 			//update the members array with the new ALIVE signal
 			subscription_handler.UpdateAliveStatus(index);
 			// if all of the subscribers are alive, kick the watchdog
@@ -99,42 +106,47 @@ namespace Core_Health {
 		}
         
 		case SUBSCRIBE_SIG: {
-			int user_id = (int)(Q_EVT_CAST(RegisterNewUserEvt)->id);
+			int user_id = (int)(Q_EVT_CAST(SubscribeUserEvt)->id);
+			int AO_index = (int)(Q_EVT_CAST(SubscribeUserEvt)->sender_id);;
 			int new_sys_id = INVALID_ID;
 
 			// subscribe the user (if there is free space)
 			new_sys_id = subscription_handler.SubscribeUser(user_id);
 			if (new_sys_id != INVALID_ID) {
 				//if we succeded in registering the new user we need notify the associated AO_Member
-				MemberEvt* member_evt = Q_NEW(MemberEvt, SUBSCRIBE_SIG);
-				member_evt->memberNum = new_sys_id;
-				AO_Member[new_sys_id]->postFIFO(member_evt);
+				MemberEvt* member_evt = Q_NEW(MemberEvt, SUBSCRIBE_ACKNOLEDGE_SIG);
+				member_evt->member_num = new_sys_id;
+				AO_Member[AO_index]->postFIFO(member_evt);
 			}
-			else printf("Subscribing didn't succeed\n");
+			else PRINT_LOG("Subscribing didn't succeed\n");
+			
 			status_ = Q_RET_HANDLED;
 			break;
 		}
 
 		case UNSUBSCRIBE_SIG: {
+			
 			bool unsubscribed_successfully = false;
 			// find the system id (ie index in members array) of the member to unsubscribe
-			int sys_id = (Q_EVT_CAST(MemberEvt)->memberNum);
+			int AO_index = (Q_EVT_CAST(UnSubscribeUserEvt)->sender_id);
+			int sys_id = (Q_EVT_CAST(UnSubscribeUserEvt)->member_num);
 			unsubscribed_successfully = subscription_handler.UnSubscribeUser(sys_id);
 			if (unsubscribed_successfully) {
 				//if we succeded in unsubscribing we need notify the associated AO_Member
-				QP::QEvt* member_evt = Q_NEW(QP::QEvt, UNSUBSCRIBE_SIG);
-				AO_Member[sys_id]->postFIFO(member_evt);
+				QP::QEvt* member_evt = Q_NEW(QP::QEvt, UNSUBSCRIBE_ACKNOLEDGE_SIG);
+				AO_Member[AO_index]->postFIFO(member_evt);
 			}
-			else printf("Unsubscribing didn't succeed\n");
+			else PRINT_LOG("Unsubscribing didn't succeed\n"); 
+			
 			status_ = Q_RET_HANDLED;
 			break;
 		}
 
 		case KICK_SIG: {
-			cout << "kick" << endl;
+			PRINT_LOG("kick\n");
 			// kick the watchdog if all of the subscribers are alive
 			if (subscription_handler.AreAllMembersResponsive() == true) watchdog_instance.Kick();
-			// we need to print to log if users aren't active and then reset the system for the next cycle
+			// we need to print to log if users aren't responsive and then reset the system for the next cycle
 			subscription_handler.LogUnResponsiveUsersAndReset();
 
 			status_ = Q_RET_HANDLED;
