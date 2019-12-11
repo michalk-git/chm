@@ -30,7 +30,7 @@ int main(int argc, char* argv[]) {
 	QP::QF::poolInit(medPoolSto,
 		sizeof(medPoolSto), sizeof(medPoolSto[0]));
 
-	// initialize command array (specifying the commands to be executed during program run
+	// initialize command array (specifying the commands to be executed during program run)
 	Command* subscription_array[N_MEMBER][COMMAND_NUM] = {
 		new Subscribe(0, 3,0) ,new Deactivate(9, 7,0),  new UnSubscribe(65,0),
 		new  Subscribe(5, 4,1),new UnSubscribe(10,1),new  Command(0),

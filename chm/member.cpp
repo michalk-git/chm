@@ -104,14 +104,12 @@ namespace Core_Health {
 		}
 
 		case MEMBER_SUBSCRIBE_SIG: {
-			//post event (coupled with signal 'SUBSCRIBE_SIG' ) to chm system
 			((QP::QEvt*)e)->sig = SUBSCRIBE_SIG;
 			AO_HealthMonitor->postFIFO((SubscribeUserEvt*)e, this);
 			status_ = Q_RET_HANDLED;
 			break;
 		}
 		case MEMBER_UNSUBSCRIBE_SIG: {
-			//post unsubscription event to chm system
 			UnSubscribeUserEvt* unsub = Q_NEW(UnSubscribeUserEvt, UNSUBSCRIBE_SIG);
 			unsub->member_num = system_id;
 			unsub->sender_id = (Q_EVT_CAST(UnSubscribeUserEvt)->sender_id);
