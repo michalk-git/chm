@@ -29,11 +29,13 @@ enum Core_HealthSignals {
     TIMEOUT_SIG = QP::Q_USER_SIG, // time event timeout
 	REQUEST_UPDATE_SIG,           //AO_CHM publishes REQUEST_SIG to itself and each subscribed member
 	TERMINATE_SIG,                //signal that terminates the program
+	TICK_SIG,
+	START_TESTS_SIG,
     MAX_PUB_SIG,                  // the last published signal
 	 
 	MEMBER_SUBSCRIBE_SIG,
 	MEMBER_UNSUBSCRIBE_SIG,
-	TICK_SIG,
+
     INIT_SIG,         
 	DEACTIVATE_SIG,               //signal to an Member AO to elicit malfunctioning behaviour (no AlIVE signals for a specified amount of periods)
 	SUBSCRIBE_SIG,                //each member can subscribe by SUBSCRIBE_SIG

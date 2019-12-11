@@ -28,13 +28,11 @@ int SubscriptionHandler::FindFreeSpace(int id, int* return_index)const {
 
 
 int SubscriptionHandler::SubscribeUser(int user_id) {
-	printf("in handler sub\n");
 	int empty_cell_index = SYSTEM_FULL;
 	int status = FindFreeSpace(user_id, &empty_cell_index);
 	if (status == USER_IN_SYS) PRINT_LOG("User %d is already in the system\n", user_id);
 	else if(status == SYSTEM_FULL) PRINT_LOG("System full\n");  
 	else {	
-		printf("empty cell index = %d", empty_cell_index);
 		//if we found an index in the members array not associated with another user, register the new subscriber and increase members count
 		members[empty_cell_index].id = user_id;
 		members_num++;

@@ -318,11 +318,12 @@ void QTimeEvt::armX(QTimeEvtCtr const nTicks, QTimeEvtCtr const interval) {
     uint_fast8_t tickRate = static_cast<uint_fast8_t>(refCtr_)
                             & static_cast<uint_fast8_t>(TE_TICK_RATE);
     QTimeEvtCtr ctr = m_ctr;  // temporary to hold volatile
-    QF_CRIT_STAT_
+	QF_CRIT_STAT_
 
-    /// @pre the host AO must be valid, time evnet must be disarmed,
-    /// number of clock ticks cannot be zero, and the signal must be valid.
-    ///
+		/// @pre the host AO must be valid, time evnet must be disarmed,
+		/// number of clock ticks cannot be zero, and the signal must be valid.
+		///
+
     Q_REQUIRE_ID(400, (m_act != static_cast<void *>(0))
                  && (ctr == static_cast<QTimeEvtCtr>(0))
                  && (nTicks != static_cast<QTimeEvtCtr>(0))

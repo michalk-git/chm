@@ -34,7 +34,7 @@ void WatchDog::WatchDogCountDown() {
 		//check if the watchdog's counter reached zero; if so, terminate
 		watchdog_reached_zero = (watchdog_instance.counter.count() <= 0);
 		if (watchdog_reached_zero) {
-			printf("WatchDog reached zero- terminating...\n");
+			PRINT_LOG("WatchDog reached zero- terminating...\n");
 			std::terminate();
 		}
 

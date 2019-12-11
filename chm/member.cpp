@@ -21,7 +21,7 @@ private:
 
 	// used for testing 
 	SubscriptionCmdOrWait cmd_handler;
-	QP::QTimeEvt        timeEvt_tick;
+
 	int num_deactivated_cycles;
 public:
 	Member();
@@ -73,7 +73,7 @@ namespace Core_Health {
 	Member Member::inst[N_MEMBER];
 	//${AOs::Member::Member} .......................................................
 	Member::Member()
-		: QActive(&initial), num_deactivated_cycles(0), timeEvt_tick(this, TICK_SIG, 0U) {};
+		: QActive(&initial), num_deactivated_cycles(0) {};
 		
 	
 
@@ -81,13 +81,11 @@ namespace Core_Health {
 	Q_STATE_DEF(Member, initial) {
 		//${AOs::Member::SM::initial}
 
-		//arm time event that fires the signal TICK_SIG every second
-		timeEvt_tick.armX(Core_Health::BSP::TICKS_PER_SEC, Core_Health::BSP::TICKS_PER_SEC);
-
 		// handle initialization event 
 		if (e->sig == INIT_SIG) {
 			cmd_handler = (Q_EVT_CAST(InitializationEvt)->cmd_or_wait);
 		}
+		subscribe(START_TESTS_SIG);
 		return tran(&active);
 	}
 
@@ -97,6 +95,11 @@ namespace Core_Health {
 
 		QP::QState status_;
 		switch (e->sig) {
+		case START_TESTS_SIG: {
+			subscribe(TICK_SIG);
+			status_ = Q_RET_HANDLED;
+			break;
+		}
 		case TICK_SIG: {
 			cmd_handler();
 			status_ = Q_RET_HANDLED;
@@ -158,7 +161,7 @@ namespace Core_Health {
 		}
 		//${AOs::Member::SM::active}
 		case Q_EXIT_SIG: {
-			timeEvt_tick.disarm();
+			
 			status_ = Q_RET_HANDLED;
 			break;
 		}

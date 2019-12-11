@@ -62,9 +62,7 @@ class SubscriptionCmdOrWait {
 	system_clock::time_point initial_time;
 
 	void CallNextCmd() {
-	//	printf("index = %d\n", curr_index);
 		subscribe_cmd_vec[curr_index++]->ExecuteCmd();
-		//printf("curr_index = %d\n", curr_index);
 	}
 
 public:

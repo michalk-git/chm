@@ -27,7 +27,7 @@ namespace Core_Health {
 		WatchDog&           watchdog_instance;
 		QP::QTimeEvt        timeEvt_request_update;
 		QP::QTimeEvt        timeEvt_kick;
-
+		QP::QTimeEvt        timeEvt_tick;
 
 		
 	public:
@@ -55,7 +55,7 @@ namespace Core_Health {
 	HealthMonitor HealthMonitor::inst;
 
 	HealthMonitor::HealthMonitor(): QActive(&initial), watchdog_instance(singleton<WatchDog>::getInstance()),
-		timeEvt_request_update(this, UPDATE_SIG, 0U), timeEvt_kick(this, KICK_SIG, 0U){
+		timeEvt_request_update(this, UPDATE_SIG, 0U), timeEvt_kick(this, KICK_SIG, 0U), timeEvt_tick(this, TIMEOUT_SIG, 0U){
 
 		//start the watchdog
 		watchdog_instance.Start(CHMConfig_t::T_WATCHDOG_RESET_SEC);
@@ -69,7 +69,11 @@ namespace Core_Health {
 		timeEvt_kick.armX(ConvertSecondsToTicks((CHMConfig_t::T_UPDATE_WATCHDOG_SEC)) + KICK_SIGNAL_DELAY, ConvertSecondsToTicks((CHMConfig_t::T_UPDATE_WATCHDOG_SEC)) + KICK_SIGNAL_DELAY);
 		//arm time event that fires the signal UPDATE_SIG every T_AO_ALIVE_SEC seconds
 		timeEvt_request_update.armX(ConvertSecondsToTicks(CHMConfig_t::T_AO_ALIVE_SEC), ConvertSecondsToTicks(CHMConfig_t::T_AO_ALIVE_SEC));
+        //arm time event that fires the signal TICK_SIG every second
+		timeEvt_tick.armX(Core_Health::BSP::TICKS_PER_SEC, Core_Health::BSP::TICKS_PER_SEC);
 
+		QP::QEvt* START_evt = Q_NEW(QP::QEvt, START_TESTS_SIG);
+		QP::QF::PUBLISH(START_evt, this);
 		return tran(&active);
 	}
 
@@ -79,6 +83,13 @@ namespace Core_Health {
 		QP::QState status_;
 
 		switch (e->sig) {
+		case TIMEOUT_SIG: {
+			//publish signal TICK_SIG 
+			QP::QEvt* time_evt = Q_NEW(QP::QEvt, TICK_SIG);
+			QP::QF::PUBLISH(time_evt, this);
+			status_ = Q_RET_HANDLED;
+			break;
+		}
 		case UPDATE_SIG: {
 			bool no_users_in_sys = (subscription_handler.GetMembersNum() == 0);                                                        
 			PRINT_LOG("update\n");
@@ -157,6 +168,7 @@ namespace Core_Health {
 		case Q_EXIT_SIG: {
 			timeEvt_request_update.disarm();
 			timeEvt_kick.disarm();
+			timeEvt_tick.disarm();
 			status_ = Q_RET_HANDLED;
 			break;
 		}
