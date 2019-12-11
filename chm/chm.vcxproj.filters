@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="bsp.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="chm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -36,7 +33,10 @@
     <ClCompile Include="watchdog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Test.cpp">
+    <ClCompile Include="CoreDebug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bsp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -60,6 +60,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CoreDebug.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

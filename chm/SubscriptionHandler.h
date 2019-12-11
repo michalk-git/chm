@@ -5,16 +5,17 @@ using namespace std;
 #define INVALID_INPUT (-1)
 #define SYSTEM_FULL (-1)
 #define INVALID_ID (-1)
+#define SUCCESS 1
+#define USER_IN_SYS (-2)
 
 class SubscriptionHandler {
 	User  members[N_MEMBER];
 	int members_num;
 
-	// checks if a user with id = 'user_id' is already in the system
-	bool IsIdInSystem(int user_id)const;
 
-	// returns index of first empty cell in members array unless the members array is full; In that case, will return -1
-	int FindFreeSpace()const;
+
+	// returns index of first empty cell in members array unless the members array is full or the id is already in the system
+	int FindFreeSpace(int id, int* return_index)const;
 
 	bool IndexInRange(int index)const;
 public:
@@ -36,7 +37,7 @@ public:
 	// sets the 'keep_alive_received' parameter to true for the user associated with system id = 'sys_id'
 	void UpdateAliveStatus(int sys_id);
 
-
+	int GetMembersNum()const;
 
 };
 

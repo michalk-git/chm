@@ -87,7 +87,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling />
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <DisableSpecificWarnings>4127</DisableSpecificWarnings>
     </ClCompile>
     <Link>
@@ -151,16 +151,17 @@
   <ItemGroup>
     <ClCompile Include="bsp.cpp" />
     <ClCompile Include="chm.cpp" />
+    <ClCompile Include="CoreDebug.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="member.cpp" />
     <ClCompile Include="SubscriptionHandler.cpp" />
     <ClCompile Include="system.cpp" />
-    <ClCompile Include="Test.cpp" />
     <ClCompile Include="watchdog.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bsp.h" />
     <ClInclude Include="chm.h" />
+    <ClInclude Include="CoreDebug.h" />
     <ClInclude Include="singleton.h" />
     <ClInclude Include="SubscriptionHandler.h" />
     <ClInclude Include="system.h" />

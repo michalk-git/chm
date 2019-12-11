@@ -4,7 +4,17 @@
 #include "qpcpp.h"
 #include "bsp.h"
 #include <stdio.h>
+#include "singleton.h"
+#include "CoreDebug.h"
 #define UNIDENTIFIED_ID (-1)
+
+
+#ifndef _DEBUG 
+#define PRINT_LOG(x) 
+#else
+#define PRINT_LOG(x,...) do {singleton<CoreDebug>::getInstance().CorePrintf(x,##__VA_ARGS__);} while (0)
+#endif
+
 
 namespace Core_Health {
 	QP::QTimeEvtCtr ConvertSecondsToTicks(unsigned int seconds);
@@ -21,10 +31,15 @@ enum Core_HealthSignals {
 	TERMINATE_SIG,                //signal that terminates the program
     MAX_PUB_SIG,                  // the last published signal
 	 
+	MEMBER_SUBSCRIBE_SIG,
+	MEMBER_UNSUBSCRIBE_SIG,
+	TICK_SIG,
     INIT_SIG,         
-	DEACTIVATE_SIG,              //signal to an Member AO to elicit malfunctioning behaviour (no AlIVE signals for a specified amount of periods)
+	DEACTIVATE_SIG,               //signal to an Member AO to elicit malfunctioning behaviour (no AlIVE signals for a specified amount of periods)
 	SUBSCRIBE_SIG,                //each member can subscribe by SUBSCRIBE_SIG
 	UNSUBSCRIBE_SIG,              //each member can unsubscribe by UNSUBSCRIBE_SIG
+	SUBSCRIBE_ACKNOLEDGE_SIG,         //each member can subscribe by SUBSCRIBE_SIG
+	UNSUBSCRIBE_ACKNOLEDGE_SIG,       //each member can unsubscribe by UNSUBSCRIBE_SIG
 	KICK_SIG,                     //AO_CHM sends itself a KICK_SIG to signal the time to (potentially) kick the watchdog 
 	UPDATE_SIG,                   // AO_CHM sends itself an UPDATE_SIG to signal the time to request an update from the subscribed members
 	ALIVE_SIG,                    //each subscribed member that receives an UPDATE_SIG posts an ALIVE_SIG to AO_CHM in response
@@ -51,12 +66,20 @@ namespace Core_Health {
 
 class MemberEvt : public QP::QEvt {
 public:
-	uint8_t memberNum;
+	uint8_t member_num;
 };
-class RegisterNewUserEvt : public QP::QEvt {
+class SubscribeUserEvt : public QP::QEvt {
 public:
+	int sender_id;
 	int id;
 };
+
+class UnSubscribeUserEvt : public QP::QEvt {
+public:
+	int sender_id;
+	int member_num;
+};
+
 class DeactivationEvt : public MemberEvt {
 public:
 	uint8_t period_num;

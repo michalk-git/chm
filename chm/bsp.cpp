@@ -90,7 +90,7 @@ namespace QP {
 	};
 
 	
-
+	/*
 	void SubscribeHandler(int user_id) {
 
 		//create an event with the new user's id and post it to the CHM system
@@ -150,7 +150,7 @@ namespace QP {
 		}
 		return false;
 	}
-
+	*/
 	//............................................................................
 		void QF_onClockTick(void) {
 
@@ -165,7 +165,7 @@ namespace QP {
 			QF::TICK_X(0U, &Core_Health::l_clock_tick); // process time events at rate 0
 			QS_RX_INPUT(); // handle the QS-RX input
 			QS_OUTPUT();   // handle the QS output
-
+			/*
 			//check if we're in the middle of a request (ie we need to receive more input to complete request)
 			if (request != IDLE) {
 				//First get the user's input on character at a time
@@ -235,6 +235,7 @@ namespace QP {
 				}
 
 			}
+			*/
 		}
 
 	//----------------------------------------------------------------------------
