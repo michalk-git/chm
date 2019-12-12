@@ -69,11 +69,11 @@ namespace Core_Health {
 		timeEvt_kick.armX(ConvertSecondsToTicks((CHMConfig_t::T_UPDATE_WATCHDOG_SEC)) + KICK_SIGNAL_DELAY, ConvertSecondsToTicks((CHMConfig_t::T_UPDATE_WATCHDOG_SEC)) + KICK_SIGNAL_DELAY);
 		//arm time event that fires the signal UPDATE_SIG every T_AO_ALIVE_SEC seconds
 		timeEvt_request_update.armX(ConvertSecondsToTicks(CHMConfig_t::T_AO_ALIVE_SEC), ConvertSecondsToTicks(CHMConfig_t::T_AO_ALIVE_SEC));
-        //arm time event that fires the signal TICK_SIG every second
+        //arm time event that fires the signal TIMEOUT_SIG every second
 		timeEvt_tick.armX(Core_Health::BSP::TICKS_PER_SEC, Core_Health::BSP::TICKS_PER_SEC);
-
-		QP::QEvt* START_evt = Q_NEW(QP::QEvt, START_TESTS_SIG);
-		QP::QF::PUBLISH(START_evt, this);
+		// create a new event 'start_evt' which is published to all members 
+		QP::QEvt* start_evt = Q_NEW(QP::QEvt, START_TESTS_SIG);
+		QP::QF::PUBLISH(start_evt, this);
 		return tran(&active);
 	}
 

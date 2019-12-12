@@ -1,24 +1,17 @@
-﻿  SubscriptionHandler.cpp
-  bsp.cpp
-C:\Projects\chm\bsp.cpp(159,29): warning C4189:  'is_num': local variable is initialized but not referenced
-C:\Projects\chm\bsp.cpp(163,29): warning C4189:  'entry_ready': local variable is initialized but not referenced
-  chm.cpp
-C:\Projects\chm\bsp.cpp(158,29): warning C4101:  'ch': unreferenced local variable
-  main.cpp
-C:\Projects\chm\chm.cpp(129,30): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+﻿  main.cpp
+C:\Projects\chm\CoreDebug.h(11,1): warning C4996:  'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message :  see declaration of 'fopen'
+C:\Projects\chm\test.h(13,30): warning C4100:  'index': unreferenced formal parameter
   member.cpp
-C:\Projects\chm\test.h(51,21): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
-C:\Projects\chm\test.h(51,21): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
-C:\Projects\chm\member.cpp(111,22): warning C4002:  too many arguments for function-like macro invocation 'postFIFO'
-C:\Projects\chm\member.cpp(119,22): warning C4002:  too many arguments for function-like macro invocation 'postFIFO'
-C:\Projects\chm\member.cpp(128,29): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
-  system.cpp
-  watchdog.cpp
-C:\Projects\chm\member.cpp(129,23): warning C4002:  too many arguments for function-like macro invocation 'postFIFO'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(257,1): warning C4530:  C++ exception handler used, but unwind semantics are not enabled. Specify /EHsc
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.22.27905\include\ostream(248): message :  while compiling class template member function 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)'
-C:\Projects\chm\watchdog.cpp(50): message :  see reference to function template instantiation 'std::basic_ostream<char,std::char_traits<char>> &std::basic_ostream<char,std::char_traits<char>>::operator <<(int)' being compiled
-C:\Projects\chm\watchdog.cpp(50): message :  see reference to class template instantiation 'std::basic_ostream<char,std::char_traits<char>>' being compiled
+C:\Projects\chm\test.h(49,21): warning C4244:  '=': conversion from 'const int' to 'uint8_t', possible loss of data
+C:\Projects\chm\CoreDebug.h(11,1): warning C4996:  'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdio.h(208): message :  see declaration of 'fopen'
+C:\Projects\chm\test.h(13,30): warning C4100:  'index': unreferenced formal parameter
+C:\Projects\chm\test.h(49,21): warning C4244:  '=': conversion from 'const int' to 'uint8_t', possible loss of data
+C:\Projects\chm\member.cpp(116,22): warning C4002:  too many arguments for function-like macro invocation 'postFIFO'
+C:\Projects\chm\member.cpp(124,22): warning C4002:  too many arguments for function-like macro invocation 'postFIFO'
+C:\Projects\chm\member.cpp(133,29): warning C4244:  '=': conversion from 'int' to 'uint8_t', possible loss of data
+C:\Projects\chm\member.cpp(134,23): warning C4002:  too many arguments for function-like macro invocation 'postFIFO'
   bsp.obj : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
 LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
 LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library

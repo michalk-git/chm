@@ -4,6 +4,7 @@
 #include "watchdog.h"
 #include <iostream>
 #include "test.h"
+#include "CoreDebug.h"
 #define COMMAND_NUM 3
 using namespace Core_Health;
 
@@ -30,16 +31,16 @@ int main(int argc, char* argv[]) {
 	QP::QF::poolInit(medPoolSto,
 		sizeof(medPoolSto), sizeof(medPoolSto[0]));
 
+	//singleton<CoreDebug>::getInstance().OpenFile("FirstTest");
 	// initialize command array (specifying the commands to be executed during program run)
 	Command* subscription_array[N_MEMBER][COMMAND_NUM] = {
-		new Subscribe(0, 3,0) ,new Deactivate(9, 7,0),  new UnSubscribe(65,0),
-		new  Subscribe(5, 4,1),new UnSubscribe(10,1),new  Command(0),
-		new   Command(0) ,new Command(0),new  Command(0),
-		new Command(0), new Command(0),new  Command(0),
-		new Command(0), new Command(0),new  Command(0),
-	
+		new Subscribe(0, 3), new Deactivate(9, 7), new UnSubscribe(65),
+		new Subscribe(5, 4), new UnSubscribe(10),  new Command(0),
+		new Command(0),      new Command(0),       new Command(0),
+		new Command(0),      new Command(0),       new Command(0),
+		new Command(0),      new Command(0),       new Command(0),
 	};
-
+	
 	
 	// start the active objects...
 	for (uint8_t n = 0U; n < N_MEMBER; ++n) {
@@ -63,7 +64,7 @@ int main(int argc, char* argv[]) {
 			delete subscription_array[i][j];
 		}
 	}
-
+	//singleton<CoreDebug>::getInstance().CloseFile();
 
 	return 0;
 }

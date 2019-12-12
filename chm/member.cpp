@@ -62,7 +62,10 @@ QP::QActive * const AO_Member[N_MEMBER] = { // "opaque" pointers to Member AO
 };
 
 
-
+// helper function to provide the ID of Member "me"
+inline uint8_t MEMBER_ID(Member const* const me) {
+	return static_cast<uint8_t>(me - &Member::inst[0]);
+}
 
 } // namespace Core_Health
 //$enddef${AOs::AO_Member[N_Member]} ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -85,28 +88,30 @@ namespace Core_Health {
 		if (e->sig == INIT_SIG) {
 			cmd_handler = (Q_EVT_CAST(InitializationEvt)->cmd_or_wait);
 		}
+		// subscribe to 'START_TESTS_SIG' (which when received signals the start of running the command array of the member AO)
 		subscribe(START_TESTS_SIG);
 		return tran(&active);
 	}
 
 	//${AOs::Member::SM::active} ................................................
 	Q_STATE_DEF(Member, active) {
-
-
 		QP::QState status_;
 		switch (e->sig) {
 		case START_TESTS_SIG: {
+			// when the member AO receives a 'START_TESTS_SIG' , it will prompt a subscription to the signal TICK_SIG
 			subscribe(TICK_SIG);
 			status_ = Q_RET_HANDLED;
 			break;
 		}
 		case TICK_SIG: {
-			cmd_handler();
+			// call the command handler each time the member AO receives a 'TICK_SIG' signal
+			cmd_handler(MEMBER_ID(this));
 			status_ = Q_RET_HANDLED;
 			break;
 		}
 
 		case MEMBER_SUBSCRIBE_SIG: {
+			// when the member AO receives a 'MEMBER_SUBSCRIBE_SIG' 
 			((QP::QEvt*)e)->sig = SUBSCRIBE_SIG;
 			AO_HealthMonitor->postFIFO((SubscribeUserEvt*)e, this);
 			status_ = Q_RET_HANDLED;
@@ -173,4 +178,6 @@ namespace Core_Health {
 		}
 		return status_;
 	}
+
+
 }
